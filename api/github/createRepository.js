@@ -48,6 +48,7 @@ const createRepository = (input, isGitHub) => {
         console.log('Created Project in GitHub: ' + ghRepoUrl )
         // Set up Master branch
         const setUpMasterEnvironment =
+          'cd ' + input.config.path + '/' + input.name + ' && ' +
           ghInfo.commands.addOrigin + ghRepoUrl + ' && ' +
           ghInfo.commands.addAll + ' && ' +
           ghInfo.commands.commit + '"Initial Commit"' + ' && ' +

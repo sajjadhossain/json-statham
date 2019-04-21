@@ -57,8 +57,6 @@ const initialize = (name) => {
         console.log('Updated project files: ', JSON.stringify(recordToInit.files))
         // Save database
         db.saveDatabase()
-        // Create a repository
-        createRepository(recordToInit, true)
         // Make directory
         const directory = recordToInit.config.path + '/' + name
         const mkdirCommand = 'mkdir ' + directory
@@ -69,6 +67,7 @@ const initialize = (name) => {
         const copyFiles =
           'cp -r ' + projectTemplate + '/* ' + directory + ' && ' +
           'touch ' + recordToInit.config.path + '/' + name + '/' + files.gitignore + ' && ' +
+          'echo "' + readMeContent + '" >> ' + recordToInit.config.path + '/' + name + '/' + files.readme + ' && ' +
           'echo "' + gitIgnoreContent + '" >> ' + recordToInit.config.path + '/' + name + '/' + files.gitignore
         exec(copyFiles, (error) => {
           if (error) { return console.log(error) }
@@ -80,6 +79,8 @@ const initialize = (name) => {
           config.install
         exec(initializeDirectory, (error) => {
           if (error) { return console.log(error) }
+          // Create a repository
+          createRepository(recordToInit, true)
         })
       })
     }
