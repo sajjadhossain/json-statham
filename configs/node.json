@@ -1,0 +1,5 @@
+{
+  "command": "npm init -y",
+  "install": "npm install --save ajv && npm install --save-dev mocha ",
+  "gitignore": "https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "json_statham",
+  "version": "0.0.1",
+  "description": "json creator and super user, using schema and tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "json-statham": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sajjadhossain/json-statham.git"
+  },
+  "keywords": [
+    "json",
+    "json-schema",
+    "node",
+    "javascript",
+    "json-validator",
+    "json-test"
+  ],
+  "author": "sajjad hossain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sajjadhossain/json-statham/issues"
+  },
+  "homepage": "https://github.com/sajjadhossain/json-statham#readme",
+  "dependencies": {
+    "ajv": "^6.10.0",
+    "dateformat": "^3.0.3",
+    "lokijs": "^1.5.6",
+    "octonode": "^0.9.5",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.1.4"
+  }
+}

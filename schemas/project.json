@@ -1,0 +1,86 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://jsonstatham.sajjad.nyc/project.json",
+  "type": "object",
+  "title": "The Project Schema",
+  "required": [
+    "config",
+    "directories",
+    "files"
+  ],
+  "properties": {
+    "config": {
+      "$id": "#/properties/config",
+      "type": "object",
+      "title": "The Config Schema",
+      "required": [
+        "path",
+        "git",
+        "node"
+      ],
+      "properties": {
+        "path": {
+          "$id": "#/properties/config/properties/path",
+          "type": "string",
+          "title": "The Path Schema",
+          "default": "",
+          "examples": [
+            "~/Desktop"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "git": {
+          "$id": "#/properties/config/properties/git",
+          "type": "boolean",
+          "title": "The Git Schema",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "node": {
+          "$id": "#/properties/config/properties/node",
+          "type": "boolean",
+          "title": "The Node Schema",
+          "default": false,
+          "examples": [
+            true
+          ]
+        }
+      }
+    },
+    "directories": {
+      "$id": "#/properties/directories",
+      "type": "array",
+      "title": "The Directories Schema",
+      "items": {
+        "$id": "#/properties/directories/items",
+        "type": "string",
+        "title": "The Items Schema",
+        "default": "",
+        "examples": [
+          "test"
+        ],
+        "pattern": "^(.*)$"
+      }
+    },
+    "files": {
+      "$id": "#/properties/files",
+      "type": "array",
+      "title": "The Files Schema",
+      "items": {
+        "$id": "#/properties/files/items",
+        "type": "string",
+        "title": "The Items Schema",
+        "default": "",
+        "examples": [
+          "README.md",
+          "index.js",
+          "test/index.js"
+        ],
+        "pattern": "^(.*)$"
+      }
+    }
+  }
+}

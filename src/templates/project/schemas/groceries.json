@@ -1,0 +1,42 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://someapiendpoint.com/groceries.json",
+  "type": "object",
+  "title": "The Groceries Schema",
+  "required": [
+    "thisMany",
+    "item",
+    "total"
+  ],
+  "properties": {
+    "thisMany": {
+      "$id": "#/properties/thisMany",
+      "type": "integer",
+      "title": "The Thismany Schema",
+      "default": 0,
+      "examples": [
+        2
+      ]
+    },
+    "item": {
+      "$id": "#/properties/item",
+      "type": "string",
+      "title": "The Item Schema",
+      "default": "",
+      "examples": [
+        "apple"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "total": {
+      "$id": "#/properties/total",
+      "type": "number",
+      "title": "The Total Schema",
+      "default": 0.0,
+      "examples": [
+        2.38
+      ]
+    }
+  }
+}

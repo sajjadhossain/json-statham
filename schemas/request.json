@@ -1,0 +1,26 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://jsonstatham.sajjad.nyc/request.json",
+  "type": "array",
+  "title": "The Request Schema",
+  "items": {
+    "$id": "#/items",
+    "type": "string",
+    "title": "The Items Schema",
+    "default": "",
+    "examples": [
+      "/usr/local/Cellar/node/7.8.0/bin/node",
+      "/Users/sajjadMH/Desktop/json_statham/index.js",
+      "project",
+      "example_node_project",
+      "config",
+      "{\"path\": \"~/Desktop\", \"git\": true, \"node\": true}",
+      "directories",
+      "[\"test\"]",
+      "files",
+      "[\"README.md\", \"index.js\", \"test/index.js\"]"
+    ],
+    "pattern": "^(.*)$"
+  }
+}

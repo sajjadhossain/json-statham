@@ -1,0 +1,119 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://jsonstatham.sajjad.nyc/user.json",
+  "type": "object",
+  "title": "The User Schema",
+  "required": [
+    "name",
+    "info"
+  ],
+  "properties": {
+    "name": {
+      "$id": "#/properties/name",
+      "type": "object",
+      "title": "The Name Schema",
+      "required": [
+        "fullName",
+        "middleNames",
+        "firstName",
+        "lastName"
+      ],
+      "properties": {
+        "fullName": {
+          "$id": "#/properties/name/properties/fullName",
+          "type": "array",
+          "title": "The Fullname Schema",
+          "items": {
+            "$id": "#/properties/name/properties/fullName/items",
+            "type": "string",
+            "title": "The Items Schema",
+            "default": "",
+            "examples": [
+              "Sajjad",
+              "Mohammed",
+              "Hossain"
+            ],
+            "pattern": "^(.*)$"
+          }
+        },
+        "middleNames": {
+          "$id": "#/properties/name/properties/middleNames",
+          "type": "array",
+          "title": "The Middlenames Schema",
+          "items": {
+            "$id": "#/properties/name/properties/middleNames/items",
+            "type": "string",
+            "title": "The Items Schema",
+            "default": "",
+            "examples": [
+              "mohammed"
+            ],
+            "pattern": "^(.*)$"
+          }
+        },
+        "firstName": {
+          "$id": "#/properties/name/properties/firstName",
+          "type": "string",
+          "title": "The Firstname Schema",
+          "default": "",
+          "examples": [
+            "sajjad"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "lastName": {
+          "$id": "#/properties/name/properties/lastName",
+          "type": "string",
+          "title": "The Lastname Schema",
+          "default": "",
+          "examples": [
+            "hossain"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "info": {
+      "$id": "#/properties/info",
+      "type": "object",
+      "title": "The Info Schema",
+      "required": [
+        "github"
+      ],
+      "properties": {
+        "github": {
+          "$id": "#/properties/info/properties/github",
+          "type": "object",
+          "title": "The Github Schema",
+          "required": [
+            "user",
+            "password"
+          ],
+          "properties": {
+            "user": {
+              "$id": "#/properties/info/properties/github/properties/user",
+              "type": "string",
+              "title": "The Git User Schema",
+              "default": "",
+              "examples": [
+                "sajjadhossain"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "password": {
+              "$id": "#/properties/info/properties/github/properties/password",
+              "type": "string",
+              "title": "The Password Schema",
+              "default": "",
+              "examples": [
+                "password"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

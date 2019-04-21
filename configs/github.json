@@ -1,0 +1,11 @@
+{
+  "url": "https://github.com",
+  "commands": {
+      "addAll": "git add -A .",
+      "commit": "git commit -m ",
+      "addOrigin": "git remote add origin ",
+      "pushOriginMaster": "git push -u origin master",
+      "pushOriginDevelop": "git push -u origin develop",
+      "pushOrigin": "git push -u origin "
+  }
+}
